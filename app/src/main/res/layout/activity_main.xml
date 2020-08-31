@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/blackframe"
+        android:orientation="vertical">
+
+        <Chronometer
+            android:id="@+id/test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25pt" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/test"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/start"
+                android:layout_width="40dp"
+                android:layout_height="80dp"
+                android:layout_toLeftOf="@+id/pause"
+                android:text="开始" />
+
+            <Button
+                android:id="@+id/pause"
+                android:layout_width="40dp"
+                android:layout_height="80dp"
+                android:layout_toLeftOf="@+id/go_on"
+                android:text="暂停" />
+
+            <Button
+                android:id="@+id/go_on"
+                android:layout_width="40dp"
+                android:layout_height="80dp"
+                android:layout_alignParentRight="true"
+                android:text="继续" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout1"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edt_send"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/blackframe"
+            android:hint="请输入" />
+
+        <com.example.project831.HeartRateLine
+            android:id="@+id/ww"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edt_send"
+            custom:speed="50" />
+    </RelativeLayout>
+</RelativeLayout>

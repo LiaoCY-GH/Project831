@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="HeartRateLine">
+        <attr name="pulses" format="integer"/>
+        <attr name="pointsOfEachPulse" format="integer"/>
+        <attr name="speed" format="integer"/>
+        <attr name="lineWidth" format="dimension"/>
+        <attr name="lineColor" format="color"/>
+    </declare-styleable>
+</resources>
